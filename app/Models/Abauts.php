@@ -10,5 +10,5 @@ class Abauts extends Model
     use HasFactory;
 
     protected $table = 'abauts';
-    protected $fillable = ['title','subtitle','descrip']; 
+    protected $fillable = ['title','subtitle','descrip', 'foto']; 
 }

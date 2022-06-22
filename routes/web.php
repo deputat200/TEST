@@ -55,7 +55,7 @@ Route::post('/sozdat', [ServisController::class, "sozdat"]);
 
 
 Route::get('dashboard', [AbautsController::class, "test"]);
-
+    
 
 
 

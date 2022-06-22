@@ -19,15 +19,21 @@ class AbautsController extends Controller
     {
 
         $abauts = new Abauts;
-
         $abauts->title = $request->input('title');
         $abauts->subtitle = $request->input('subtitle');
         $abauts->descrip = $request->input('descrip');
+        $abauts->foto = $request->input('foto');
 
-
+        if ($image = $request->file('image')) { 
+            $destinationPath = 'image/';
+            
+            $image->move($destinationPath, $image);
+            $data['image'] = "$image";
+        }
         $abauts->save();
         return redirect('/abauts')->with('muvaffaqiyat', 'Biz haqimizda qoshilgan malumotlar');
     }
+
 
    
 

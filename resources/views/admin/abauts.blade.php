@@ -61,6 +61,10 @@ About | Us
                             <input class="form-control" name="subtitle" id="message-text">
                           </div>
                           <div class="mb-3">
+                            <label for="message-text" class="col-form-label">IMG</label>
+                            <input type="file" class="form-control" name="foto" id="message-text">
+                          </div>
+                          <div class="mb-3">
                             <label for="message-text" class="col-form-label">Description:</label>
                             <textarea class="form-control" name="descrip" id="message-text"></textarea>
                           </div>
@@ -94,6 +98,7 @@ About | Us
                   <thead class="text-warning">
                     <th class="hek">Id</th>
                     <th class="hek">Title</th>
+                    <th class="hek">IMG</th>
                     <th class="hek">Sub-Title</th>
                     <th class="hek">Description</th>
                     
@@ -108,6 +113,7 @@ About | Us
                     <tr style="width: 21%">
                       <td>{{ ++$index}}</td>
                       <td>{{ $data->title}}</td>
+                      <td><img src="/public/image/{{ $data->foto}}" style="width: 50px; height: 50px;" alt=""></td>
                       <td>{{ $data->subtitle}}</td>
                       <td>
                           {{ $data->descrip}}</td>
